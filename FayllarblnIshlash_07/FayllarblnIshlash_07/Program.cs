@@ -12,8 +12,8 @@ namespace FayllarblnIshlash_07
             public string Phone { get; set; }
         }
 
-        private const string filePath = "C:\\Users\\Asus\\OneDrive\\Documents\\GitHub\\FayllarblnIshlash_07";
-        private static List<User> users;
+        private const string filePath = "C:\\Users\\Asus\\OneDrive\\Documents\\GitHub\\FayllarblnIshlash_07\\Login.txt";
+        private static List<User> users = new List<User>();
 
         static void Main(string[] args)
         {
@@ -54,7 +54,7 @@ namespace FayllarblnIshlash_07
             Console.WriteLine("Sign Up");
             Console.Write("Enter your Full Name: ");
             string fullName = Console.ReadLine();
-            Console.Write("Enter a Username");
+            Console.Write("Enter a Username: ");
             string userName = Console.ReadLine();
             Console.Write("Enter your Password: ");
             string password = Console.ReadLine();
@@ -83,7 +83,7 @@ namespace FayllarblnIshlash_07
             Console.Write("Enter your password: ");
             string password = Console.ReadLine();
 
-            User founderUser = users.Find(user => user.FullName == username && user.Password == password);
+            User founderUser = users.Find(user => user.UserName == username && user.Password == password);
 
             if(founderUser != null)
             {
